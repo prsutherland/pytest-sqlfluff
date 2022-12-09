@@ -1,0 +1,10 @@
+site_name: pytest-sqlfluff
+site_description: A plugin to use sqlfluff in pytest
+site_author: Paul Sutherland
+
+theme: readthedocs
+
+repo_url: https://github.com/prsutherland/pytest-sqlfluff
+
+pages:
+- Home: index.md
