@@ -10,9 +10,9 @@ pytest-sqlfluff
     :target: https://pypi.org/project/pytest-sqlfluff
     :alt: Python versions
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/prsutherland/pytest-sqlfluff?branch=main
-    :target: https://ci.appveyor.com/project/prsutherland/pytest-sqlfluff/branch/main
-    :alt: See Build Status on AppVeyor
+.. image:: https://github.com/prsutherland/pytest-sqlfluff/actions/workflows/ci-flow.yml/badge.svg?branch=main
+    :target: https://github.com/prsutherland/pytest-sqlfluff/actions/workflows/ci-flow.yml?branch=main
+    :alt: See Build Status on Github Workflows
 
 A pytest plugin to use sqlfluff to enable format checking of sql files
 
