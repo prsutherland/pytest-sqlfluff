@@ -1,5 +1,5 @@
 site_name: pytest-sqlfluff
-site_description: A plugin to use sqlfluff in pytest
+site_description: A pytest plugin to use sqlfluff to enable format checking of sql files
 site_author: Paul Sutherland
 
 theme: readthedocs

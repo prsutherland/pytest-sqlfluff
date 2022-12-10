@@ -1,3 +1,3 @@
 # Welcome to pytest-sqlfluff
 
-A plugin to use sqlfluff in pytest
+A pytest plugin to use sqlfluff to enable format checking of sql files
