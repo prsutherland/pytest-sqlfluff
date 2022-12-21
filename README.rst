@@ -14,29 +14,34 @@ pytest-sqlfluff
     :target: https://github.com/prsutherland/pytest-sqlfluff/actions/workflows/ci-flow.yml?branch=main
     :alt: See Build Status on Github Workflows
 
-A pytest plugin to use sqlfluff to enable format checking of sql files
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/ambv/black
+    :alt: Code Style: Black
+
+A `pytest`_ plugin to use `sqlfluff`_ to enable format checking of sql files.
 
 ----
-
-This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
 
 
 Features
 --------
 
-* TODO
+* Tests any sql files found in project.
+* Leverages existing `sqlfluff`_ configurations.
+* Skips unchanged sql files.
 
 
 Requirements
 ------------
 
-* TODO
+* Python 3.7+
+* `sqlfluff`_ 1.0.0+
 
 
 Installation
 ------------
 
-You can install "pytest-sqlfluff" via `pip`_ from `PyPI`_::
+You can install `pytest-sqlfluff` via `pip`_ from `PyPI`_::
 
     $ pip install pytest-sqlfluff
 
@@ -44,12 +49,43 @@ You can install "pytest-sqlfluff" via `pip`_ from `PyPI`_::
 Usage
 -----
 
-* TODO
+Out of the box, you can run `pytest-sqlfluff` as argument to `pytest`_::
+
+    $ pytest --sqlfluff
+    ====================================== test session starts ======================================
+    platform darwin -- Python 3.9.6, pytest-7.2.0, pluggy-1.0.0
+    rootdir: /code/github.com/prsutherland/pytest-sqlfluff
+    plugins: sqlfluff-0.1.0
+    collected 1 item
+
+    tests/file.sql .                                                                          [100%]
+
+    ======================================= 1 passed in 0.45s =======================================
+
+To configure your sqlfluff linting, use the standard `sqlfluff configuration`_ mechanisms. At the very
+least, you'll likely need to set the dialect.::
+
+    [sqlfluff]
+    dialect = postgres
+    ...
+
+
+
 
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `pytest`_, please ensure
 the coverage at least stays the same before you submit a pull request.
+
+To get started::
+
+    $ git clone https://github.com/prsutherland/pytest-sqlfluff.git
+    $ cd pytest-sqlfluff
+    $ poetry install
+
+Run tests::
+
+    $ poetry run pytest
 
 License
 -------
@@ -62,15 +98,10 @@ Issues
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
 
-.. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
-.. _`@hackebrot`: https://github.com/hackebrot
-.. _`MIT`: http://opensource.org/licenses/MIT
-.. _`BSD-3`: http://opensource.org/licenses/BSD-3-Clause
-.. _`GNU GPL v3.0`: http://www.gnu.org/licenses/gpl-3.0.txt
-.. _`Apache Software License 2.0`: http://www.apache.org/licenses/LICENSE-2.0
-.. _`cookiecutter-pytest-plugin`: https://github.com/pytest-dev/cookiecutter-pytest-plugin
 .. _`file an issue`: https://github.com/prsutherland/pytest-sqlfluff/issues
-.. _`pytest`: https://github.com/pytest-dev/pytest
-.. _`tox`: https://tox.readthedocs.io/en/latest/
+.. _`MIT`: http://opensource.org/licenses/MIT
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project
+.. _`pytest`: https://github.com/pytest-dev/pytest
+.. _`sqlfluff`: https://docs.sqlfluff.com/en/stable/
+.. _`sqlfluff configuration`: https://docs.sqlfluff.com/en/stable/configuration.html
