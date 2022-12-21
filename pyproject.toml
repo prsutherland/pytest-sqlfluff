@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytest-sqlfluff"
-version = "0.1.0"
+version = "0.1.1"
 description = "A pytest plugin to use sqlfluff to enable format checking of sql files."
 authors = ["Paul Sutherland <paul@homemade-logic.com>"]
 license = "MIT"
